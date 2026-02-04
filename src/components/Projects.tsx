@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, ShoppingCart, Home, Ruler } from "lucide-react";
+import TTSButton from "./TTSButton";
 
 const projects = [
   {
@@ -60,7 +61,10 @@ const Projects = () => {
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-400">
                   <ShoppingCart size={28} />
                 </div>
-                <ExternalLink size={20} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                <div className="flex items-center gap-2">
+                  <TTSButton text={`${projects[0].title}. ${projects[0].description}. Technologies used: ${projects[0].tags.join(', ')}`} />
+                  <ExternalLink size={20} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                </div>
               </div>
               
               <div className="flex-1">
@@ -96,7 +100,10 @@ const Projects = () => {
                   <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
                     <project.icon size={24} />
                   </div>
-                  <ExternalLink size={18} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <div className="flex items-center gap-2">
+                    <TTSButton text={`${project.title}. ${project.description}. Technologies used: ${project.tags.join(', ')}`} />
+                    <ExternalLink size={18} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                  </div>
                 </div>
                 
                 <div className="flex-1">

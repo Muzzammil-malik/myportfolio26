@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Trophy, Cpu } from "lucide-react";
+import TTSButton from "./TTSButton";
 
 const certifications = [
   {
@@ -53,9 +54,12 @@ const Certifications = () => {
                   <cert.icon size={24} />
                 </div>
                 <div className="flex-1">
-                  <span className="text-xs font-medium text-cyan-400 uppercase tracking-wider">
-                    {cert.subtitle}
-                  </span>
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-medium text-cyan-400 uppercase tracking-wider">
+                      {cert.subtitle}
+                    </span>
+                    <TTSButton text={`${cert.title}. ${cert.subtitle}. ${cert.description}`} />
+                  </div>
                   <h3 className="text-lg font-semibold mt-1 mb-2">{cert.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {cert.description}
