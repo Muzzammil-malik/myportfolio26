@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Briefcase, Users } from "lucide-react";
+import TTSButton from "./TTSButton";
 
 const Experience = () => {
+  const experienceText = "Tech Core Member at Orators Club, MJCET. Actively involved in technical initiatives and events. Collaboration, tech learning, and innovation-focused role.";
+
   return (
     <section className="section-container">
       <motion.div
@@ -34,11 +37,14 @@ const Experience = () => {
                 <Users size={28} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <Briefcase size={16} className="text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">
-                    Orators Club, MJCET
-                  </span>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Briefcase size={16} className="text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Orators Club, MJCET
+                    </span>
+                  </div>
+                  <TTSButton text={experienceText} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Tech Core Member</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
