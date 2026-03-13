@@ -111,3 +111,66 @@
     text-wrap: balance;
   }
 }
+
+/* Animated glowing background */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.animated-bg::before,
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: float-blob 12s ease-in-out infinite alternate;
+}
+
+.animated-bg::before {
+  width: 600px;
+  height: 600px;
+  background: hsl(190 100% 50% / 0.12);
+  top: -10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.animated-bg::after {
+  width: 500px;
+  height: 500px;
+  background: hsl(220 100% 60% / 0.10);
+  bottom: -10%;
+  right: -5%;
+  animation-delay: -6s;
+}
+
+.animated-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: float-blob-2 15s ease-in-out infinite alternate;
+  width: 400px;
+  height: 400px;
+  background: hsl(260 80% 55% / 0.12);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float-blob {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, 40px) scale(1.15); }
+  100% { transform: translate(-40px, 80px) scale(0.95); }
+}
+
+@keyframes float-blob-2 {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-30%, -40%) scale(1.2); }
+  100% { transform: translate(-60%, -55%) scale(0.9); }
+}

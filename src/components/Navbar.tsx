@@ -14,8 +14,14 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.8 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4"
     >
+      {/* Name / Logo */}
+      <a href="#home" className="text-lg font-bold gradient-text tracking-tight">
+        Muzzammil Malik
+      </a>
+
+      {/* Center nav */}
       <div className="glass rounded-full px-2 py-2">
         <ul className="flex items-center gap-1">
           {navLinks.map((link) => (
@@ -30,6 +36,9 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
+
+      {/* Spacer for symmetry */}
+      <div className="w-[140px]" />
     </motion.nav>
   );
 };

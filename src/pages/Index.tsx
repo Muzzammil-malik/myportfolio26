@@ -11,6 +11,10 @@ import FloatingMailButton from "@/components/FloatingMailButton";
 const Index = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      {/* Animated glowing background */}
+      <div className="animated-bg">
+        <div className="animated-bg-blob" />
+      </div>
       <Navbar />
       <Hero />
       <About />
