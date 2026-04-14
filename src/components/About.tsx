@@ -6,11 +6,13 @@ const education = [
     period: "2023 – 2025",
     degree: "Intermediate",
     institution: "MS Junior College, Masab Tank",
+    grade: "93.3%",
   },
   {
     period: "2025 – 2029",
     degree: "B.Tech (Pursuing)",
     institution: "Muffakham Jah College of Engineering & Technology (MJCET)",
+    grade: "9.5 SGPA",
   },
 ];
 
