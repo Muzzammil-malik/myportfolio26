@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
-import { ExternalLink, ShoppingCart, Home, Ruler } from "lucide-react";
+import { ExternalLink, ShoppingCart, Home, Ruler, Skull, Stethoscope } from "lucide-react";
 import TTSButton from "./TTSButton";
 
 const projects = [
+  {
+    title: "Dead Legends",
+    description: "An AI-powered platform where you can talk to legendary historical figures, recreated using advanced prompt engineering and agentic AI.",
+    icon: Skull,
+    tags: ["React", "Node.js", "GenAI"],
+    featured: true,
+  },
+  {
+    title: "ClinixAI",
+    description: "AI-powered medical assistant that analyzes symptoms via follow-up questions and generates structured health reports with possible causes, precautions, and recovery insights. Includes intelligent triage for serious conditions.",
+    icon: Stethoscope,
+    tags: ["Next.js", "Tailwind CSS", "Firebase", "OpenAI API"],
+    featured: false,
+  },
   {
     title: "Full Stack E-Commerce Website",
     description: "Complete frontend and backend integration with modern stack",
     icon: ShoppingCart,
     tags: ["React", "Node.js", "MongoDB"],
-    featured: true,
+    featured: false,
   },
   {
     title: "Home Automation System",
