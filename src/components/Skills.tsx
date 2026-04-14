@@ -9,6 +9,11 @@ const skills = [
   "IoT",
   "Web Design",
   "Graphic Design",
+  "Prompt Engineering",
+  "Next.js",
+  "AutoCAD",
+  "Vibe Coding",
+  "AI Tools",
 ];
 
 const Skills = () => {

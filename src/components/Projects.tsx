@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
-import { ExternalLink, ShoppingCart, Home, Ruler } from "lucide-react";
+import { ExternalLink, ShoppingCart, Home, Ruler, Skull, Stethoscope } from "lucide-react";
 import TTSButton from "./TTSButton";
 
 const projects = [
+  {
+    title: "Dead Legends",
+    description: "An AI-powered platform where you can talk to legendary historical figures, recreated using advanced prompt engineering and agentic AI.",
+    icon: Skull,
+    tags: ["React", "Node.js", "GenAI"],
+    featured: true,
+  },
+  {
+    title: "ClinixAI",
+    description: "AI-powered medical assistant that analyzes symptoms via follow-up questions and generates structured health reports with possible causes, precautions, and recovery insights. Includes intelligent triage for serious conditions.",
+    icon: Stethoscope,
+    tags: ["Next.js", "Tailwind CSS", "Firebase", "OpenAI API"],
+    featured: false,
+  },
   {
     title: "Full Stack E-Commerce Website",
     description: "Complete frontend and backend integration with modern stack",
     icon: ShoppingCart,
     tags: ["React", "Node.js", "MongoDB"],
-    featured: true,
+    featured: false,
   },
   {
     title: "Home Automation System",
@@ -59,7 +73,7 @@ const Projects = () => {
             <div className="relative z-10 h-full flex flex-col">
               <div className="flex items-start justify-between mb-6">
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-400">
-                  <ShoppingCart size={28} />
+                  {(() => { const Icon = projects[0].icon; return <Icon size={28} />; })()}
                 </div>
                 <div className="flex items-center gap-2">
                   <TTSButton text={`${projects[0].title}. ${projects[0].description}. Technologies used: ${projects[0].tags.join(', ')}`} />
