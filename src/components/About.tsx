@@ -6,11 +6,13 @@ const education = [
     period: "2023 – 2025",
     degree: "Intermediate",
     institution: "MS Junior College, Masab Tank",
+    grade: "93.3%",
   },
   {
     period: "2025 – 2029",
     degree: "B.Tech (Pursuing)",
     institution: "Muffakham Jah College of Engineering & Technology (MJCET)",
+    grade: "9.5 SGPA",
   },
 ];
 
@@ -52,6 +54,9 @@ const About = () => {
                 <h3 className="text-lg font-semibold mb-1">{item.degree}</h3>
                 <p className="text-muted-foreground text-sm">
                   {item.institution}
+                </p>
+                <p className="text-sm font-medium text-cyan-400 mt-1">
+                  Grade: {item.grade}
                 </p>
               </div>
             </div>
