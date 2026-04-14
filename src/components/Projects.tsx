@@ -73,7 +73,7 @@ const Projects = () => {
             <div className="relative z-10 h-full flex flex-col">
               <div className="flex items-start justify-between mb-6">
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-400">
-                  <projects[0].icon size={28} />
+                  {(() => { const Icon = projects[0].icon; return <Icon size={28} />; })()}
                 </div>
                 <div className="flex items-center gap-2">
                   <TTSButton text={`${projects[0].title}. ${projects[0].description}. Technologies used: ${projects[0].tags.join(', ')}`} />
