@@ -55,6 +55,9 @@ const About = () => {
                 <p className="text-muted-foreground text-sm">
                   {item.institution}
                 </p>
+                <p className="text-sm font-medium text-cyan-400 mt-1">
+                  Grade: {item.grade}
+                </p>
               </div>
             </div>
           </motion.div>
